@@ -42,16 +42,16 @@ xcodebuild archive \
 -scheme "$ZWScheme" \
 -configuration "$ZWConfiguration" \
 -archivePath "$ZWBuildTempDir/$ZWProjectName.xcarchive"
-CODE_SIGN_IDENTITY="iPhone Distribution: 孝远 杨 (NKW67GFDHM)" #证书
-PROVISIONING_PROFILE="7f5477ac-67af-487e-b1e1-292e6402a2b6" #描述文件UUID
+CODE_SIGN_IDENTITY="" #证书
+PROVISIONING_PROFILE="" #描述文件UUID
 
 xcodebuild \
 -exportArchive \
 -archivePath "$ZWBuildTempDir/$ZWProjectName.xcarchive" \
 -exportPath "$HCIpaDir/$ZWDate/" \
 -exportOptionsPlist "./exportOptionsPlist.plist" \
-CODE_SIGN_IDENTITY="iPhone Distribution: 孝远 杨 (NKW67GFDHM)"
-PROVISIONING_PROFILE="7f5477ac-67af-487e-b1e1-292e6402a2b6" #描述文件UUID
+CODE_SIGN_IDENTITY="" #证书
+PROVISIONING_PROFILE="" #描述文件UUID
 
 #这里不需要设置证书
 #编译流程
@@ -82,8 +82,8 @@ PROVISIONING_PROFILE="7f5477ac-67af-487e-b1e1-292e6402a2b6" #描述文件UUID
 
 #通过蒲公英提供的上传应用 API，调用系统的 curl 命令来上传应用。
 FilePath="$HCIpaDir/$ZWDate/${ZWScheme}.ipa"
-UKey="013cca42bc5347715f895cfc8061f75f" #开发者的用户 Key，在应用管理-API中查看
-ApiKey="4861c59806712e3473c867520884236f" #是开发者的 API Key，在应用管理-API中查看 注意不是APPKey
+#UKey="User key" #开发者的用户 Key，在应用管理-API中查看
+#ApiKey="API key" #是开发者的 API Key，在应用管理-API中查看 注意不是APPKey
 
 #chmod -R 777 "${FilePath}"
 curl \
