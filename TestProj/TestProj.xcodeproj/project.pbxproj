@@ -78,6 +78,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E404088204EA7CE00D5B398 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				7E53A937204E6A6200B8508F /* Main.storyboard */,
+				7E53A93A204E6A6200B8508F /* Assets.xcassets */,
+				7E53A93C204E6A6200B8508F /* LaunchScreen.storyboard */,
+				7E53A93F204E6A6200B8508F /* Info.plist */,
+				7E53A940204E6A6200B8508F /* main.m */,
+			);
+			path = Resoures;
+			sourceTree = "<group>";
+		};
 		7E53A925204E6A6100B8508F = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +117,7 @@
 				7E53A932204E6A6100B8508F /* AppDelegate.m */,
 				7E53A934204E6A6200B8508F /* ViewController.h */,
 				7E53A935204E6A6200B8508F /* ViewController.m */,
-				7E53A937204E6A6200B8508F /* Main.storyboard */,
-				7E53A93A204E6A6200B8508F /* Assets.xcassets */,
-				7E53A93C204E6A6200B8508F /* LaunchScreen.storyboard */,
-				7E53A93F204E6A6200B8508F /* Info.plist */,
-				7E53A940204E6A6200B8508F /* main.m */,
+				7E404088204EA7CE00D5B398 /* Resoures */,
 			);
 			path = TestProj;
 			sourceTree = "<group>";
@@ -432,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NKW67GFDHM;
-				INFOPLIST_FILE = TestProj/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestProj/Resoures/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderhong.iflyMSC;
@@ -450,7 +458,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NKW67GFDHM;
-				INFOPLIST_FILE = TestProj/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TestProj/Resoures/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coderhong.iflyMSC;
