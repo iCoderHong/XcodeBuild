@@ -9,16 +9,16 @@ xcodebuild 是苹果发布自动构建的工具。
 
 1.下载`PackageApplication`命令。
 2.拷贝到下面目录
-```
+```bash
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/
 ```
 3.执行命令
-```
+```shell
 sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer/
 chmod +x /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication
 ```
 构建脚本
-```
+```shell
 #编译 链接 签名 生成app
 #如果要构建workspace，你必须指定-workspace和-scheme参数。
 xcodebuild \
@@ -41,13 +41,13 @@ rm -rf $ZWBuildDir/temp
 
 open $HCIpaDir
 ```
-![]()
+![](https://github.com/coderketao/XcodeBuild/blob/master/TestProj/imags/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-06%20%E4%B8%8B%E5%8D%8810.06.31.png)
 
 报警告建议使用`xcodebuild -exportArchive`构建
 
 ## xcodebuild -exportArchive方式
 构建命令
-```
+```Shell
 xcodebuild archive \
 -workspace "$ZWWorkspace/$ZWProjectName.xcodeproj/project.xcworkspace" \
 -scheme "$ZWScheme" \
@@ -67,7 +67,7 @@ PROVISIONING_PROFILE="" #描述文件UUID
 这里注意`-exportOptionsPlist`参数。
 
 ###将构建的包分发
-```
+```bash
 curl \
 -F "file=@${FilePath}" \
 -F "uKey=${UKey}" \
