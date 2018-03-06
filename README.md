@@ -67,7 +67,7 @@ PROVISIONING_PROFILE="" #描述文件UUID
 ```
 这里注意`-exportOptionsPlist`参数。
 
-###将构建的包分发
+### 将构建的包分发
 ```ruby
 curl \
 -F "file=@${FilePath}" \
@@ -76,7 +76,7 @@ curl \
 https://www.pgyer.com/apiv2/app/upload
 ```
 
-###issue
+### issue
 
 ![](https://github.com/coderketao/XcodeBuild/blob/master/TestProj/imags/Snip20180306_1.png)
 解决办法：在`exportOptionsPlist.plist`关闭`Bitcode`为NO。
