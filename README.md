@@ -8,6 +8,7 @@ xcodebuild 是苹果发布自动构建的工具。
 在Xcode升级到8.3已就过期了，如果还需要该方式构建需要如下工作
 
 1.下载`PackageApplication`命令。
+
 2.拷贝到下面目录
 ```ruby
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/
@@ -75,7 +76,10 @@ curl \
 https://www.pgyer.com/apiv2/app/upload
 ```
 
+###issue
 
+![](https://github.com/coderketao/XcodeBuild/blob/master/TestProj/imags/Snip20180306_1.png)
+解决办法：在`exportOptionsPlist.plist`关闭`Bitcode`为NO。
 
 
 
